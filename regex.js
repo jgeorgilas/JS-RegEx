@@ -31,7 +31,10 @@ Expected Output:
 
 */ 
  
-let phoneReg = /write your regex here/
+let phoneReg = ^[1-9]\d{2}-\d{3}-\d{4}
+let phoneArr = sampleApp.match(phoneReg)
+console.log(phoneArr)
+
 
 /* 
 
@@ -51,10 +54,11 @@ Expected Output:
 
 */ 
 
-let emailReg = /write your regex here/
+let emailReg = ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
+let emailArr = sampleApp.match(emailReg)
+console.log(emailArr)
 
-/* 
-
+/*
 Regular Expression 3: 
 - Format to match: "Status:"
 - Planned usage: Will be used to find where the status of the application is located in the string. Be sure to make the regex insensitive to casing as some applicants like to type in all caps or all lowercase. 
@@ -67,4 +71,6 @@ Expected Output:
 
 */ 
 
-let statusReg = /write your regex here/
+let statusReg = /status:/i
+let statusIndex = sampleApp.match(statusReg)
+console.log(statusReg)
